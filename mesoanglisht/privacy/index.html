@@ -7,6 +7,43 @@
   <meta name="description" content="How the Mëso Anglisht app handles your information.">
   <link rel="icon" href="icon.png">
   <link rel="stylesheet" href="../../assets/site.css">
+  <style>
+    /* Ngjyrat e Mëso Anglisht (indigo + e kuqe), vetëm për këtë faqe. */
+    :root {
+      --bg: #f5f6fa;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7f0;
+      --brand: #3c3b6e;
+      --brand-ink: #1e1b4b;
+      --gold: #b22234;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #12111f;
+        --surface: #1c1b2e;
+        --text: #eceaf7;
+        --muted: #a9a7c4;
+        --line: #2c2a45;
+        --brand: #a9a8f5;
+        --gold: #f07a86;
+      }
+    }
+    .hero {
+      position: relative;
+      background: radial-gradient(120% 140% at 20% 0%, #5b5bd6 0%, #3c3b6e 50%, #1e1b4b 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 4px;
+      background: linear-gradient(90deg,
+        #e41e20 0 20%, #000 20% 40%, #0a3161 40% 60%, #fff 60% 80%, #b22234 80% 100%);
+    }
+    .eyebrow { color: #c7c6ff; }
+  </style>
 </head>
 <body>
   <header class="hero">
